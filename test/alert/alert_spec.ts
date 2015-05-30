@@ -1,14 +1,30 @@
-import {AlertComponent} from 'src/alert/alert';
+import {
+  AsyncTestCompleter,
+  beforeEach,
+  ddescribe,
+  describe,
+  expect,
+  iit,
+  inject,
+  it,
+  xdescribe,
+  xit,
+  IS_DARTIUM
+  } from 'angular2/test_lib';
 
-describe('alert', function () {
-  var alert;
+import {AlertComponent} from 'angular2-ui/alert/alert';
 
-  beforeEach(function () {
-    alert = new AlertComponent();
+export function main() {
+  describe('alert', function () {
+    var alert;
+
+    beforeEach(function () {
+      alert = new AlertComponent();
+    });
+
+    it('should work', function () {
+      expect(alert.name).toBe('Alice');
+    });
+
   });
-
-  it('should work', function () {
-    expect(alert.name).toBe('Alice');
-  });
-
-});
+}

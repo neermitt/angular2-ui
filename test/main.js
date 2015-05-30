@@ -12,6 +12,7 @@ System.baseURL = '/base/';
 // So that we can import packages like `core/foo`, instead of `core/src/foo`.
 System.paths = {
   '*': './*.js',
+  'angular2-ui/*': 'src/*.js',
   'angular2/*': 'node_modules/angular2/*.js',
   'rtts_assert/*': 'node_modules/angular2/node_modules/rtts_assert/*.js',
   'rx': 'node_modules/angular2/node_modules/rx/dist/rx.js'
@@ -29,6 +30,8 @@ System.import('angular2/src/dom/browser_adapter').then(function(browser_adapter)
         return System.import(path).then(function(module) {
           if (module.hasOwnProperty('main')) {
             module.main();
+          } else {
+            throw new Error('Module ' + path + ' does not implement main() method.');
           }
         });
       }));

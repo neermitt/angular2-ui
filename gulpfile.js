@@ -26,23 +26,15 @@ var CONFIG = {
 
 // TRANSPILE TYPESCRIPT
 gulp.task('build.src.js', function () {
-  gulp.src(CONFIG.src.main)
+  gulp.src([CONFIG.src.main, 'typings/**/*.d.ts'])
     .pipe(sourcemaps.init())
     .pipe(typescript(typescriptOptions.es5))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(CONFIG.dest.js.dev.es5 + '/src'));
 });
 
-gulp.task('build.src.examples', function () {
-  gulp.src(CONFIG.src.example)
-    .pipe(sourcemaps.init())
-    .pipe(typescript(typescriptOptions.es5))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest(CONFIG.dest.js.dev.es5 + '/examples'));
-});
 
-
-gulp.task('build', ['build.src.js', 'build.src.examples']);
+gulp.task('build', ['build.src.js']);
 
 
 // WATCH FILES FOR CHANGES

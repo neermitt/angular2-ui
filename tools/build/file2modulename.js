@@ -1,7 +1,6 @@
 function file2moduleName(filePath) {
   return filePath.replace(/\\/g, '/')
     // module name should be relative to `modules` and `tools` folder
-    .replace(/.*\/src\//, '')
     .replace(/.*\/base\//, '')
     .replace(/\.js$/, '')
 }
