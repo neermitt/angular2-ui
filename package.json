@@ -1,0 +1,41 @@
+{
+  "name": "angular2-ui",
+  "version": "0.0.1",
+  "description": "Bootstrap Widgets port to Angular2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neermitt/angular2-ui.git"
+  },
+  "keywords": [
+    "angular2",
+    "bootstrap",
+    "angular.ui"
+  ],
+  "author": "Neeraj Mittal <mittal.neeraj@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/neermitt/angular2-ui/issues"
+  },
+  "homepage": "https://github.com/neermitt/angular2-ui",
+  "dependencies": {
+    "angular2": "^2.0.0-alpha.25"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.3.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-typescript": "^2.7.5",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.33",
+    "karma-chrome-launcher": "^0.1.12",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-jasmine": "^0.3.5",
+    "karma-requirejs": "^0.2.2",
+    "karma-typescript-preprocessor": "0.0.19",
+    "reflect-metadata": "^0.1.0",
+    "requirejs": "^2.1.17",
+    "systemjs": "^0.16.11",
+    "typescript": "^1.5.0-beta"
+  }
+}
