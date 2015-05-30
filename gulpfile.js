@@ -1,8 +1,8 @@
 var gulp = require('gulp');
 var typescript = require('gulp-typescript');
 var connect = require('gulp-connect');
-var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
+var merge = require('merge2');
 
 var typescriptOptions = require('./config').typescript;
 
@@ -26,11 +26,17 @@ var CONFIG = {
 
 // TRANSPILE TYPESCRIPT
 gulp.task('build.src.js', function () {
-  gulp.src([CONFIG.src.main, 'typings/**/*.d.ts'])
+  var tsResult = gulp.src([CONFIG.src.main, 'typings/**/*.d.ts'])
     .pipe(sourcemaps.init())
-    .pipe(typescript(typescriptOptions.es5))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(CONFIG.dest.js.dev.es5 + '/src'));
+    .pipe(typescript(typescriptOptions.es5));
+
+  return merge([
+    tsResult.js
+      .pipe(sourcemaps.write('.'))
+      .pipe(gulp.dest(CONFIG.dest.js.dev.es5)),
+    tsResult.dts
+      .pipe(gulp.dest(CONFIG.dest.js.dev.es5))
+  ]);
 });
 
 

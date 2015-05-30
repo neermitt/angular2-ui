@@ -2,7 +2,10 @@
   "typescript":{
     "es5": {
       "module": "commonjs",
-      "target": "ES5"
+      "target": "ES5",
+      "noImplicitAny": true,
+      "declaration": true,
+      "noEmitOnError": true
     },
     "es6": {
       "module": "commonjs",
