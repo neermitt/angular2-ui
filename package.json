@@ -23,7 +23,11 @@
   "devDependencies": {
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.3.0",
+    "gulp-concat": "^2.5.2",
     "gulp-connect": "^2.2.0",
+    "gulp-insert": "^0.4.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.3",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-typescript": "^2.7.5",
     "karma": "^0.12.33",
@@ -35,7 +39,8 @@
     "reflect-metadata": "^0.1.0",
     "requirejs": "^2.1.17",
     "systemjs": "^0.16.11",
+    "systemjs-builder": "^0.10.6",
     "tsd": "^0.6.0",
-    "typescript": "^1.5.0-beta"
+    "typescript": "alexeagle/TypeScript#error_is_class"
   }
 }

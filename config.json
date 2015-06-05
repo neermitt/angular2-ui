@@ -5,11 +5,19 @@
       "target": "ES5",
       "noImplicitAny": true,
       "declaration": true,
-      "noEmitOnError": true
+      "noEmitOnError": true,
+      "allowNonTsExtensions": false,
+      "declaration": true,
+      "emitDecoratorMetadata": true
     },
     "es6": {
-      "module": "commonjs",
-      "target": "ES6"
+      "target": "ES6",
+      "noImplicitAny": true,
+      "declaration": true,
+      "noEmitOnError": true,
+      "allowNonTsExtensions": false,
+      "declaration": true,
+      "emitDecoratorMetadata": true
     },
     "release": {
       "removeComments": true
